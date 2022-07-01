@@ -1,0 +1,9 @@
+<div class="grid">
+    <article *ngFor="let hero of heroes">
+        <div>
+            <h3>{{hero.superhero}}</h3>
+            <p>{{hero.alter_ego}}</p>
+        </div>
+        <img src="../../../../assets/{{hero.id}}.jpg" alt="heroe.superhero">
+    </article>
+</div>

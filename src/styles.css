@@ -1,9 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    --dark-color: #1e1e1e;
+    --grey-color: #333;
+    --grey-color-2: rgb(77, 77, 77);
+    --text-color: rgba(255, 255, 255, 0.9);
+    --shadow:rgba(0, 0, 0, 0.9);
+
+}
 body{
+    /* overflow-y: hidden; */
+    box-sizing: border-box;
+    min-width: 260px;
+    margin: 0px;
     font-family: sans-serif;
+    background-color: var(--dark-color);
+    color: white;
+    letter-spacing: 1.5px;
 }
 h1,
 h2,
-h3{
+h3,
+h4,
+p{
     margin: 0px;
+}
+p{
+    color: rgba(255, 255, 255, 0.8);
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+ul{
+    margin: 0px;
+    padding: 0px;
 }

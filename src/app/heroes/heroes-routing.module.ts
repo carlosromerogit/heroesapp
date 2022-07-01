@@ -6,6 +6,7 @@ import { ListComponent } from './pages/list/list.component';
 import { AddComponent } from './pages/add/add.component';
 import { EditComponent } from './pages/edit/edit.component';
 import { HeroComponent } from './pages/hero/hero.component';
+import { SearchComponent } from './pages/search/search.component';
 
 const routes: Routes =[
   {
@@ -27,6 +28,10 @@ const routes: Routes =[
       {
         path:'list',
         component:ListComponent
+      },
+      {
+        path:'search',
+        component: SearchComponent
       },
       {
         path:'**',
