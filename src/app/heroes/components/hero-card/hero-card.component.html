@@ -4,6 +4,10 @@
             <h3>{{hero.superhero}}</h3>
             <p>{{hero.alter_ego}}</p>
         </div>
-        <img src="../../../../assets/{{hero.id}}.jpg" alt="heroe.superhero">
+        <img [src]="hero | image" alt="heroe.superhero">
+        <div class="buttons-container">
+            <button [routerLink]="['/heroes/edit', hero.id]" class="button-color">Editar</button>
+            <button [routerLink]="['/heroes/hero', hero.id]">Leer más</button>
+        </div>
     </article>
 </div>

@@ -8,13 +8,13 @@ import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChild, Vie
 export class LoginComponent implements OnInit, AfterViewInit {
 
   // @ViewChild('paraph') paraph!: ElementRef<HTMLParagraphElement>
-  @ViewChildren('paraph') paraph!:QueryList<ElementRef<HTMLParagraphElement>>
+  @ViewChildren('paraphs') paraphs!:QueryList<ElementRef<HTMLParagraphElement>>
 
   names: string[] = ['Carlos','Mariana', 'Alexa']
   
   constructor() { }
   ngAfterViewInit(): void {
-    this.paraph.forEach(e => e.nativeElement.addEventListener('click',(event)=>{
+    this.paraphs.forEach(e => e.nativeElement.addEventListener('click',(event)=>{
         console.log(event.target)
     }))
   }

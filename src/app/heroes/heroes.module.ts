@@ -8,6 +8,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { HeroesRoutingModule } from './heroes-routing.module';
 import { SearchComponent } from './pages/search/search.component';
 import { HeroCardComponent } from './components/hero-card/hero-card.component';
+import { ImagePipe } from './pipes/image.pipe';
 
 
 
@@ -19,7 +20,8 @@ import { HeroCardComponent } from './components/hero-card/hero-card.component';
     HeroComponent,
     HomeComponent,
     SearchComponent,
-    HeroCardComponent
+    HeroCardComponent,
+    ImagePipe
   ],
   imports: [
     CommonModule,

@@ -12,9 +12,20 @@ article{
     background-color: var(--grey-color);
 }
 article div{
-    padding: 0.5rem;
+    padding: 0.8rem 0.6rem 1rem 0.6rem;
 }
+
 article img{
     width: 100%;
     height: auto;
+}
+.buttons-container{
+    text-align: right;
+}
+.button-color{
+    background-color: var(--red-color);
+    margin-right: 0.5rem;
+}
+.button-color:active{
+    background-color: var(--red-color-2);
 }
