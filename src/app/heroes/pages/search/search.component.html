@@ -1,1 +1,17 @@
-<p>search works!</p>
+<div class="search-container">
+    <div style="border-bottom: 1px solid rgba(255, 255, 255, 0.2); margin-bottom: 1rem;">
+        <h2 style="padding-bottom: 0.5rem;">Buscar Héroe</h2>
+    </div>
+    <div class="search-grid">
+        <div>
+            <input (input)="typeQuery()" #search type="text" placeholder="Buscar...">
+            <ul *ngIf="query.length !== 0">
+                <li *ngFor="let hero of heroesSuggested" (click)="selectHeroSuggested(hero.superhero)"><span>{{hero.superhero}}</span></li>
+                <li *ngIf="heroesSuggested.length === 0"> <span> No se encontró un héroe con ese término.</span></li>
+            </ul>
+        </div>
+        <div>
+            {{hero|json}}
+        </div>
+    </div>
+</div>

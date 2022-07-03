@@ -1,0 +1,33 @@
+.search-container {
+    padding: 1rem 3vw;
+}
+
+input {
+    width: 75%;
+}
+
+ul {
+    width: calc(75% + 1rem + 2px);
+    margin-bottom: 1rem;
+    box-shadow: 1px 2px 3px var(--shadow-color);
+    background-color: var(--grey-color);
+}
+
+ul>li {
+    padding: 0.5rem 0px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+ul>li>span{
+    padding: 0px 0.5rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+ul>li:hover{
+    background-color: var(--grey-color-3);
+}
+
+.search-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+}

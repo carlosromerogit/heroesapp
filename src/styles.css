@@ -42,6 +42,9 @@ ul {
     margin: 0px;
     padding: 0px;
 }
+li{
+    list-style-type: none;
+}
 
 button {
     padding: 0.3rem 0.5rem;
@@ -56,4 +59,22 @@ button {
 }
 button:active{
     background-color: var(--grey-color-3);
+}
+hr{
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+input{
+    padding: 0.5rem;
+    border: 1px solid var(--grey-color-3);
+    /* border-radius: 2px; */
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.8);
+
+}
+input:focus-visible{
+    outline: none;
+}
+input::placeholder{
+    color: rgba(255, 255, 255, 0.8);
 }
