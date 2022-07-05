@@ -1,0 +1,44 @@
+.title-wrap{
+    padding: 1rem 3vw;
+}
+h2{
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    padding: 1rem 3vw;
+
+}
+form{
+    position: relative;
+    padding-bottom: 3rem;
+}
+.input-container{
+    width: 90%;
+    margin-bottom: 2rem;
+}
+.input-error{
+    position: absolute;
+    /* display: none; */
+    color: var(--red-color);
+}
+input, 
+select{
+    width: 100%;
+}
+.button-container{
+    position: absolute;
+    left: 35%;
+}
+.error{
+    border: 1px solid var(--red-color);
+}
+
+img{
+    width: 100%;
+}
+button{
+    padding: 0.5rem 2rem;
+}
