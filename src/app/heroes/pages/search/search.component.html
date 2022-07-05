@@ -3,7 +3,7 @@
         <h2 style="padding-bottom: 0.5rem;">Buscar Héroe</h2>
     </div>
     <div class="search-grid">
-        <div>
+        <div class="search-container">
             <input (input)="typeQuery()" #search type="text" placeholder="Buscar...">
             <ul *ngIf="query.length !== 0">
                 <li *ngFor="let hero of heroesSuggested" (click)="selectHeroSuggested(hero.superhero)"><span>{{hero.superhero}}</span></li>
@@ -11,7 +11,7 @@
             </ul>
         </div>
         <div>
-            {{hero|json}}
+           <app-hero-card [heroes]="hero"></app-hero-card>
         </div>
     </div>
 </div>

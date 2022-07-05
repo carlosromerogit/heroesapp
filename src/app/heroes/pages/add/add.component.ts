@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HeroService } from '../../services/hero.service';
-import { Hero } from '../../interfaces/hero.interface';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add',
@@ -11,7 +11,7 @@ import { Hero } from '../../interfaces/hero.interface';
 export class AddComponent implements OnInit {
 
   form: FormGroup = this.formBuilder.group({
-    superhero: ['', [Validators.required, Validators.minLength(6)]],
+    superhero: ['', [Validators.required]],
     alter_ego:['', [Validators.required]],
     first_appearance:['', [Validators.required]],
     characters:['',[Validators.required]],
@@ -36,7 +36,8 @@ export class AddComponent implements OnInit {
   ];
 
   constructor(private formBuilder:FormBuilder,
-              private heroService: HeroService) { }
+              private heroService: HeroService,
+              private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -58,7 +59,6 @@ export class AddComponent implements OnInit {
     this.form.markAllAsTouched();
     const hero = this.form.value;
     this.heroService.createHero(hero)
-        .subscribe(console.log)
+        .subscribe((hero)=>this.router.navigate(['/heroes/edit', hero.id ]))
   }
-
 }

@@ -36,6 +36,7 @@ export class SearchComponent implements OnInit {
       this.heroService.getHeroByQuery(hero)
           .subscribe(hero => {
             this.hero = hero;
+            this.hero = this.hero.slice(0,1);
             this.query = '';
             this.search.nativeElement.value = '';
           })

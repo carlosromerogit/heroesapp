@@ -3,7 +3,7 @@
 }
 
 input {
-    width: 75%;
+    width: 100%;
 }
 
 ul {
@@ -30,4 +30,10 @@ ul>li:hover{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 
+}
+.search-container{
+    margin-bottom: 1rem;
+}
+app-hero-card{
+    margin-top: 0px;
 }

@@ -4,7 +4,7 @@
 <div class="grid-container">
     <form [formGroup]="form" (ngSubmit)="addHero()">
         <div class="input-container">
-            <input formControlName="superhero" type="text" placeholder="superhéroe"
+            <input formControlName="superhero" type="text" placeholder="Superhéroe"
                 [ngClass]="{'error':ifError('superhero')}" required>
             <div *ngIf="ifError('superhero')" class="input-error"><small>{{ errorMessage('superhero') }}</small></div>
         </div>
@@ -41,6 +41,6 @@
         </div>
     </form>
     <div>
-    <img src="{{ url }}" alt="Hero Image">
+    <img src="{{ url | image }}" alt="Hero Image">
     </div>
 </div>

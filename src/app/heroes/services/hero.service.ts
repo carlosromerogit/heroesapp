@@ -22,7 +22,13 @@ export class HeroService {
   getHeroByQuery(query:string):Observable<Hero[]>{
     return this.http.get<Hero[]>(`http://localhost:3000/heroes/?q=${query}`)
   }
-  createHero(hero: Hero){
-    return this.http.post(`${this.baseUrl}/heroes`, hero)
+  createHero(hero: Hero):Observable<Hero>{
+    return this.http.post<Hero>(`${this.baseUrl}/heroes`, hero)
+  }
+  updateHero(id:string, hero: Hero):Observable<Hero>{
+    return this.http.put<Hero>(`${this.baseUrl}/heroes/${id}`, hero)
+  }
+  deleteHero(id:string):Observable<any>{
+    return this.http.delete<any>(`${this.baseUrl}/heroes/${id}`)
   }
 }
